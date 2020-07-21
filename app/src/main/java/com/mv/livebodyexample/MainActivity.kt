@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity(), SetThresholdDialogFragment.ThresholdDi
      * 88          88      88  88
      * 88          88  888888  888888
      */
-    private val frameOrientation: Int = 7
+    private val frameOrientation: Int = 2
 
     private var screenWidth: Int = 0
     private var screenHeight: Int = 0
@@ -117,8 +117,8 @@ class MainActivity : AppCompatActivity(), SetThresholdDialogFragment.ThresholdDi
                     val parameters = camera?.parameters
                     parameters?.setPreviewSize(previewWidth, previewHeight)
 
-                    factorX = screenWidth / previewHeight.toFloat()
-                    factorY = screenHeight / previewWidth.toFloat()
+                    factorX = screenWidth / previewWidth.toFloat()
+                    factorY = screenHeight / previewHeight.toFloat()
 
                     camera?.parameters = parameters
 
